@@ -1,39 +1,33 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Madura
- * Date: 19/10/2016
- * Time: 15:46
+ * User: asankanissanka
+ * Date: 6/6/16
+ * Time: 9:34 PM
  */
-require_once('autoload.php');
+require __DIR__ . '/../autoload.php';
 
-use Swagger\Client\Api\DefaultApi;
-use Swagger\Client\ApiClient;
-use Swagger\Client\Configuration;
-use Swagger\Client\Model\ActivityRecord;
+use Swagger\Client\ShoutoutClient;
 
-$authorization = 'Apikey <API_KEY>';//Replace <API_KEY> with your API Key
-$config = new Configuration();
-$config->setDebug(true);
-$config->setSSLVerification(false);
+$apiKey = 'XXXXXXXXX.XXXXXXXXX.XXXXXXXXX';
 
-$apiClient = new ApiClient($config);
+$client = new ShoutoutClient($apiKey,true,false);
 
-$api_instance = new DefaultApi($apiClient);
-$activity_record = new ActivityRecord(array(
-    'user_id' =>'xx',//Required. your account id
+
+$activity = array(
+    'userId' => '94777123456',//Required. your account id
     //arbitrary attributes
-    'activity_name' => 'User Signup',
-    'activity_data'=>array(
-        'name'=>'John',
-        'date'=>'2016-10-19',
-        'user_id'=>'reg101'
+    'activityName' => 'Sample Activity',
+    'activityData' => array(
+        'param1' => 'val1',
+        'param2' => 'val2',
+        'param3' => 'val3'
     )
-));
+);
 
 try {
-    $result = $api_instance->activitiesRecordsPost($activity_record, $authorization);
+    $result = $client->createActivity($activity);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->contactPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when creating activity ', $e->getMessage(), PHP_EOL;
 }

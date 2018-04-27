@@ -1,5 +1,5 @@
 {
     "require": {
-        "shoutoutlabs/shoutout-sdk": "^1.0"
+        "shoutoutlabs/shoutout-sdk": "^3.0"
     }
 }

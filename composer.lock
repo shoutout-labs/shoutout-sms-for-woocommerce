@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbb9ba9610d4636542c6490d3b35370d",
+    "hash": "74a5e795feeade779f463199dd272d1b",
+    "content-hash": "d9fe16096f04f7242900536809cc8e62",
     "packages": [
         {
             "name": "shoutoutlabs/shoutout-sdk",
-            "version": "1.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shoutout-labs/shoutout-sdk-php.git",
-                "reference": "fc90b5588bf6da58da1b0b6ad32aa8207410409a"
+                "reference": "662f05e0779907917a3f314a21c5b507bfb5bcc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shoutout-labs/shoutout-sdk-php/zipball/fc90b5588bf6da58da1b0b6ad32aa8207410409a",
-                "reference": "fc90b5588bf6da58da1b0b6ad32aa8207410409a",
+                "url": "https://api.github.com/repos/shoutout-labs/shoutout-sdk-php/zipball/662f05e0779907917a3f314a21c5b507bfb5bcc4",
+                "reference": "662f05e0779907917a3f314a21c5b507bfb5bcc4",
                 "shasum": ""
             },
             "require": {
@@ -27,6 +28,7 @@
                 "php": ">=5.4"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.12",
                 "phpunit/phpunit": "~4.8",
                 "satooshi/php-coveralls": "~1.0",
                 "squizlabs/php_codesniffer": "~2.6"
@@ -39,12 +41,12 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache v2"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Asanka Nissanka",
-                    "homepage": "https://asankan.info"
+                    "name": "ShoutOUT Team",
+                    "email": "dev@getshoutout.com"
                 }
             ],
             "description": "shoutout sdk for php",
@@ -52,9 +54,10 @@
             "keywords": [
                 "api",
                 "php",
-                "sdk"
+                "sdk",
+                "swagger"
             ],
-            "time": "2016-12-19T16:47:13+00:00"
+            "time": "2018-04-11 09:18:34"
         }
     ],
     "packages-dev": [],
