@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74a5e795feeade779f463199dd272d1b",
-    "content-hash": "d9fe16096f04f7242900536809cc8e62",
+    "content-hash": "9858ea7bbfac02588000e9db8a7fa4e2",
     "packages": [
         {
             "name": "shoutoutlabs/shoutout-sdk",
@@ -57,7 +56,7 @@
                 "sdk",
                 "swagger"
             ],
-            "time": "2018-04-11 09:18:34"
+            "time": "2018-04-11T09:18:34+00:00"
         }
     ],
     "packages-dev": [],

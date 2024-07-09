@@ -3,8 +3,8 @@
 Contributors: shoutoutlabs
 Tags: Woo, Order Notifications, ShoutOUT, ShoutOUT Lite, SMS, Email Marketing, Send Notifications
 Requires at least: 4.7
-Tested up to: 4.7
-Stable tag: 1.0.3
+Tested up to: 5.0.3
+Stable tag: 3.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -60,15 +60,15 @@ Easy steps to install the plugin:
 
 == Frequently Asked Questions ==
 
-*It's broken!
+* It's broken!
 
 Have you checked the requirements? If yes, let us know and we'll be fixing it soon.
 
-*Why did you make this plugin?
+* Why did you make this plugin?
 
 We needed something like this for our clients who is using woocommerce.
 
-*I want the plugin to do X. Can you change it?
+* I want the plugin to do X. Can you change it?
 
 You're free to make feature suggestions, but if it's custom work you want, contact us.
 
@@ -87,6 +87,13 @@ You're free to make feature suggestions, but if it's custom work you want, conta
 
 
 == Changelog ==
+= 3.0.0 =
+*	Release Date - 23th Jan, 2019
+*  	Updated shoutout sdk to the latest version
+
+= 2.0.0 =
+*	Release Date - 27th Jun, 2018
+*  	Updated shoutout sdk to the latest version
 
 = 1.0.3 =
 *	Release Date - 4th Jan, 2017

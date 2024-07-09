@@ -56,7 +56,7 @@ class ShoutOUT_Sms_For_Woo {
     public function __construct() {
 
         $this->plugin_name = 'shoutout-sms-for-woocommerce';
-        $this->version = '1.0.3';
+        $this->version = '2.0.0';
         $this->load_dependencies();
         $this->set_locale();
         $this->define_admin_hooks();
