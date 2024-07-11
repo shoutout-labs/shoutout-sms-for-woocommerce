@@ -16,7 +16,8 @@ class ShoutOUT_Sms_For_Woo_Activator {
      * @since    1.0.0
      */
     public static function activate() {
-        self::create_files();
+        $activator = new ShoutOUT_Sms_For_Woo_Activator();
+        $activator->create_files();
     }
 
     private function create_files() {

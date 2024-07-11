@@ -99,7 +99,7 @@ class ShoutOUT_Sms_For_Woo_Admin {
                 $message = get_option('shoutout_sms_woo_default_sms_template');
             }
             $message = self::replace_message_body($message, $order_details);
-            $phone = $order_details->billing_phone;
+            $phone = $order_details->get_billing_phone();
             self::send_customer_notification_sms_shoutout_sms_for_woo($phone, $message);
         }
     }
@@ -126,28 +126,26 @@ class ShoutOUT_Sms_For_Woo_Admin {
             $phone = str_replace("+","",$phone);
         }
 
-        require __DIR__ . './../vendor/autoload.php';
+        require_once __DIR__ . '/../vendor/autoload.php';
 
         $apiKey = get_option("shoutout_sms_woo_auth_token");
         $from_number = get_option("shoutout_sms_woo_from_number");
 
-        $config = Swagger\Client\Configuration::getDefaultConfiguration();
-        $config->setApiKey('Authorization',$apiKey);
-        $config->setApiKeyPrefix('Authorization', 'Apikey');
-        $config->setSSLVerification(false);
+        $client = new Swagger\Client\ShoutoutClient($apiKey, $debug, $verifySSL);
 
-        $apiInstance = new Swagger\Client\Api\DefaultApi();
-
-        $messagesdk = new Swagger\Client\Model\Message(array(
+        $message = array(
             'source' => $from_number,
             'destinations' => [$phone],
             'content' => array(
                 'sms' => $message
             ),
             'transports' => ['SMS']
-        ));
-
-        $result = $apiInstance->messagesPost($messagesdk,$config);
+        );
+        try {
+            $result = $client->sendMessage($message);
+        } catch (Exception $e) {
+            echo 'Exception when sending message: ', $e->getMessage(), PHP_EOL;
+        }
     }
 
     public static function shoutout_send_admin_order_notification_sms($order_id) {

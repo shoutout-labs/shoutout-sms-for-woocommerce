@@ -23,7 +23,7 @@ class ShoutOUT_SMS_For_Woo_Logger {
      */
     public function __destruct() {
         foreach ($this->_handles as $handle) {
-            @fclose(escapeshellarg($handle));
+            @fclose($handle);
         }
     }
 

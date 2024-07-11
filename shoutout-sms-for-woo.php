@@ -5,7 +5,7 @@
  * Plugin Name:       ShoutOUT SMS for WooCommerce
  * Plugin URI:
  * Description:       Send SMS update notifications to your customers with ShoutOUT plugin for WooCommerce.
- * Version:           1.0.3
+ * Version:           2.0.0
  * Author:            shoutoutlabs
  * Author URI:        http://getshoutout.com/
  * License:           GPLv3
